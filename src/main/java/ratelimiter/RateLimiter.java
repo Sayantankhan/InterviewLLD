@@ -134,8 +134,8 @@ public class RateLimiter {
         service.registerUser("user_3", RateLimiterType.LEAKY_BUCKET, 4, 4);
 
         for (int i = 0; i < 100; i++) {
-            //System.out.println("User 1 Request " + (i + 1) + " : " + service.allowRequest("user_1"));
-            //System.out.println("User 2 Request " + (i + 1) + " : " + service.allowRequest("user_2"));
+            System.out.println("User 1 Request " + (i + 1) + " : " + service.allowRequest("user_1"));
+            System.out.println("User 2 Request " + (i + 1) + " : " + service.allowRequest("user_2"));
             System.out.println("User 3 Request " + (i + 1) + " : " + service.allowRequest("user_3"));
             System.out.println("=============================");
             Thread.sleep(1000);
